@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Kesarwani — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .list-plain{list-style:none; margin:0; padding:0;}
+  .list-plain li{display:flex; gap:14px; padding:12px 0; border-bottom:1px dashed var(--line); font-size:14.5px; color:var(--paper-dim);}
+  .list-plain li:last-child{border-bottom:none;}
+  .list-plain .mk{color:var(--accent); font-family:'IBM Plex Mono', monospace; font-size:12px; padding-top:2px;}
+  .contact-cta{
+    border:1px solid var(--accent-dim); background:var(--accent-soft);
+    padding:32px; margin-top:8px; text-align:center;
+  }
+  .contact-cta p{margin:0 0 18px; color:var(--paper-dim); font-size:14.5px;}
+  @media (max-width:860px){.two-col{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">YK<span>/</span>DRAWING SET</div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Index</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="cta active">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="sheet-header">
+    <span class="tag mono">Sheet 04 — Sign-off</span>
+    <h1>Education &amp; contact</h1>
+    <p class="dek">Where I studied, what I've won, and how to reach me.</p>
+  </div>
+
+  <section>
+    <div class="two-col" style="margin-top:40px;">
+      <div class="spec-box" data-tag="EDUCATION">
+        <div class="spec-row"><span class="k mono">DEGREE</span><span class="v">B.Tech, CSE</span></div>
+        <div class="spec-row"><span class="k mono">INSTITUTE</span><span class="v">KIET Group of Institutions</span></div>
+        <div class="spec-row"><span class="k mono">LOCATION</span><span class="v">Ghaziabad, UP</span></div>
+        <div class="spec-row"><span class="k mono">TIMELINE</span><span class="v">2025 – 2029</span></div>
+        <div class="spec-row"><span class="k mono">COURSEWORK</span><span class="v">DSA · OOP · DBMS</span></div>
+      </div>
+      <ul class="list-plain">
+        <li><span class="mk mono">01</span><span>1st place — FMC Competition</span></li>
+        <li><span class="mk mono">02</span><span>2nd place — Mime &amp; Act</span></li>
+        <li><span class="mk mono">03</span><span>Writing and sound design for creative and performance projects</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="sheet-label"><span class="num mono">04a</span><h2>Get in touch</h2><span class="rule"></span></div>
+  <section>
+    <div class="contact-cta">
+      <p>Open to internships, collaborations, or just talking shop about web dev and hardware.</p>
+      <a class="btn primary" href="mailto:kesarwaniyuvraj72@gmail.com?subject=Let%27s%20connect">Email kesarwaniyuvraj72@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="titleblock">
+    <div class="tb-row">
+      <div class="tb-cell"><span class="k mono">Drawn by</span><span class="v">Yuvraj Kesarwani</span></div>
+      <div class="tb-cell"><span class="k mono">Email</span><span class="v"><a href="mailto:kesarwaniyuvraj72@gmail.com?subject=Let%27s%20connect">kesarwaniyuvraj72@gmail.com</a></span></div>
+      <div class="tb-cell"><span class="k mono">GitHub</span><span class="v"><a href="https://github.com/Theyuviiiii/Yuvraj-Kesharwani" target="_blank" rel="noopener">Theyuviiiii</a></span></div>
+      <div class="tb-cell"><span class="k mono">LinkedIn</span><span class="v"><a href="https://linkedin.com/in/yuvraj-kesharwani-ba609b363/" target="_blank" rel="noopener">yuvraj-kesharwani</a></span></div>
+    </div>
+  </div>
+  <p class="fineprint">SHEET 04 OF 04 — GHAZIABAD, UTTAR PRADESH — REV. 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

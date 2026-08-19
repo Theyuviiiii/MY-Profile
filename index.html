@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Kesarwani — Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero{padding:56px 0 40px; display:grid; grid-template-columns:1.15fr 1fr; gap:48px; align-items:center; border-bottom:1px solid var(--line);}
+  .terminal{
+    background:var(--bg-2); border:1px solid var(--line); padding:22px 24px;
+    font-family:'IBM Plex Mono', monospace; font-size:14px; min-height:190px;
+  }
+  .terminal .tline{margin-bottom:8px; color:var(--paper-dim);}
+  .terminal .prompt{color:var(--accent);}
+  .terminal .caret{display:inline-block; width:8px; height:16px; background:var(--accent); vertical-align:-3px; animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .hero .ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:24px;}
+
+  .radar{position:relative; width:280px; height:280px; border-radius:50%; margin:0 auto;}
+  .radar .ring{position:absolute; border:1px solid var(--line); border-radius:50%;}
+  .radar .ring.r1{inset:0;} .radar .ring.r2{inset:22%;} .radar .ring.r3{inset:44%;}
+  .radar .crosshair::before, .radar .crosshair::after{content:''; position:absolute; background:var(--line);}
+  .radar .crosshair::before{left:0; right:0; top:50%; height:1px;}
+  .radar .crosshair::after{top:0; bottom:0; left:50%; width:1px;}
+  .radar .sweep{position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 0deg, rgba(232,163,61,0.55) 0deg, rgba(232,163,61,0) 55deg, transparent 360deg); animation:sweep 5s linear infinite;}
+  @keyframes sweep{to{transform:rotate(360deg);}}
+  .radar .blip{position:absolute; width:8px; height:8px; border-radius:50%; transform:translate(-50%,-50%);}
+  .radar .blip .dot{width:100%; height:100%; border-radius:50%; background:var(--green); opacity:.2; animation:blip 5s linear infinite;}
+  @keyframes blip{0%,96%,100%{opacity:.2;} 2%{opacity:1;} 8%{opacity:.2;}}
+  @media (prefers-reduced-motion:reduce){.radar .sweep{animation:none;} .radar .blip .dot{animation:none; opacity:.85;}}
+
+  .index-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;}
+  .index-card{background:var(--bg); padding:26px; display:flex; flex-direction:column; gap:10px; text-decoration:none; transition:background .15s ease;}
+  .index-card:hover{background:var(--bg-2); text-decoration:none;}
+  .index-card .sheetno{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent); letter-spacing:.06em;}
+  .index-card h3{font-size:18px; font-weight:600;}
+  .index-card p{margin:0; font-size:13.5px; color:var(--paper-dim);}
+  .index-card .go{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); margin-top:auto;}
+  .index-card:hover .go{color:var(--accent);}
+  @media (max-width:860px){.hero{grid-template-columns:1fr;} .radar{order:-1;}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">YK<span>/</span>DRAWING SET</div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html" class="active">Index</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <span class="mono" style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent);">// Ghaziabad, India — CSE, 2nd year</span>
+      <h1 style="font-size:clamp(32px,4.5vw,50px); font-weight:700; line-height:1.08; margin:16px 0 0;">Yuvraj Kesarwani</h1>
+      <div class="terminal" id="terminal" data-lines='[{"p":"$","t":"whoami"},{"p":">","t":"Yuvraj Kesarwani — CSE student, KIET Ghaziabad"},{"p":"$","t":"status --current"},{"p":">","t":"building web apps, IoT hardware, and CAD models"},{"p":"$","t":"_"}]'></div>
+      <div class="ctas">
+        <a class="btn primary" href="projects.html">View projects</a>
+        <a class="btn" href="mailto:kesarwaniyuvraj72@gmail.com?subject=Let%27s%20connect">Get in touch</a>
+      </div>
+    </div>
+    <div class="radar" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="crosshair" style="position:absolute; inset:0;"></div>
+      <div class="sweep"></div>
+      <div class="blip" style="top:20%; left:70%;"><div class="dot" style="animation-delay:.15s;"></div></div>
+      <div class="blip" style="top:75%; left:78%;"><div class="dot" style="animation-delay:1.4s;"></div></div>
+      <div class="blip" style="top:80%; left:25%;"><div class="dot" style="animation-delay:2.7s;"></div></div>
+      <div class="blip" style="top:25%; left:20%;"><div class="dot" style="animation-delay:3.9s;"></div></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sheet-label"><span class="num mono">00</span><h2>Drawing index</h2><span class="rule"></span></div>
+    <div class="index-grid">
+      <a class="index-card" href="about.html">
+        <span class="sheetno mono">SHEET 01</span>
+        <h3>About</h3>
+        <p>Who I am, what I study, and how I got here.</p>
+        <span class="go mono">Open sheet →</span>
+      </a>
+      <a class="index-card" href="skills.html">
+        <span class="sheetno mono">SHEET 02</span>
+        <h3>Skills</h3>
+        <p>An interactive breadboard of what I work with.</p>
+        <span class="go mono">Open sheet →</span>
+      </a>
+      <a class="index-card" href="projects.html">
+        <span class="sheetno mono">SHEET 03</span>
+        <h3>Projects</h3>
+        <p>Datasheets for what I've built, in progress, and sketched out.</p>
+        <span class="go mono">Open sheet →</span>
+      </a>
+      <a class="index-card" href="contact.html">
+        <span class="sheetno mono">SHEET 04</span>
+        <h3>Contact</h3>
+        <p>Education, achievements, and how to reach me.</p>
+        <span class="go mono">Open sheet →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="titleblock">
+    <div class="tb-row">
+      <div class="tb-cell"><span class="k mono">Drawn by</span><span class="v">Yuvraj Kesarwani</span></div>
+      <div class="tb-cell"><span class="k mono">Sheet</span><span class="v">00 of 04 — Index</span></div>
+      <div class="tb-cell"><span class="k mono">Location</span><span class="v">Ghaziabad, India</span></div>
+      <div class="tb-cell"><span class="k mono">Rev.</span><span class="v">2026</span></div>
+    </div>
+  </div>
+  <p class="fineprint">DRAWING SET — YUVRAJ KESARWANI PORTFOLIO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

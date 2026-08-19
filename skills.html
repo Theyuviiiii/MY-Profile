@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Kesarwani — Skills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hint{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); margin-top:8px;}
+  .breadboard{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;
+  }
+  .bb-card{background:var(--bg); padding:26px; display:flex; flex-direction:column; gap:14px;}
+  .bb-top{display:flex; align-items:center; justify-content:space-between;}
+  .bb-code{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--accent); letter-spacing:.05em;}
+  .led{width:9px; height:9px; border-radius:50%; background:var(--line); border:1px solid var(--line); transition:background .2s ease, box-shadow .2s ease;}
+  .led.lit{background:var(--green); box-shadow:0 0 6px var(--green); border-color:var(--green);}
+  .bb-card h3{font-size:17px; font-weight:600;}
+  .bb-list{list-style:none; margin:0; padding:0; opacity:.25; transition:opacity .25s ease;}
+  .bb-list.lit{opacity:1;}
+  .bb-list li{font-size:13px; color:var(--paper-dim); padding:3px 0;}
+  .bb-list li::before{content:'— '; color:var(--muted);}
+  .bb-switch{
+    align-self:flex-start; display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--line); background:none; color:var(--muted); cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.05em; padding:6px 10px;
+    text-transform:uppercase;
+  }
+  .bb-switch:hover{border-color:var(--accent-dim); color:var(--paper);}
+  .bb-switch .track{width:22px; height:12px; border:1px solid var(--muted); position:relative; flex-shrink:0;}
+  .bb-switch .knob{position:absolute; top:1px; left:1px; width:8px; height:8px; background:var(--muted); transition:left .15s ease, background .15s ease;}
+  .bb-switch[data-on="true"] .track{border-color:var(--accent);}
+  .bb-switch[data-on="true"] .knob{left:11px; background:var(--accent);}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">YK<span>/</span>DRAWING SET</div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Index</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="sheet-header">
+    <span class="tag mono">Sheet 02 — Circuit diagram</span>
+    <h1>Skills</h1>
+    <p class="dek">Four components on one board. Flip a switch to power the details.</p>
+    <p class="hint">// click a switch below</p>
+  </div>
+
+  <section>
+    <div class="breadboard">
+      <div class="bb-card">
+        <div class="bb-top"><span class="bb-code mono">C-01</span><span class="led" id="led-1"></span></div>
+        <h3>Programming</h3>
+        <button class="bb-switch" data-on="false" data-target="led-1" aria-pressed="false"><span class="track"><span class="knob"></span></span>Power</button>
+        <ul class="bb-list" id="list-1">
+          <li>C, C++, Java, Python</li>
+          <li>Data structures &amp; algorithms</li>
+          <li>Object-oriented programming</li>
+          <li>Problem solving</li>
+        </ul>
+      </div>
+      <div class="bb-card">
+        <div class="bb-top"><span class="bb-code mono">C-02</span><span class="led" id="led-2"></span></div>
+        <h3>Web development</h3>
+        <button class="bb-switch" data-on="false" data-target="led-2" aria-pressed="false"><span class="track"><span class="knob"></span></span>Power</button>
+        <ul class="bb-list" id="list-2">
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>Firebase (auth, Firestore, hosting)</li>
+          <li>Git &amp; GitHub</li>
+          <li>Responsive design</li>
+        </ul>
+      </div>
+      <div class="bb-card">
+        <div class="bb-top"><span class="bb-code mono">C-03</span><span class="led" id="led-3"></span></div>
+        <h3>IoT &amp; electronics</h3>
+        <button class="bb-switch" data-on="false" data-target="led-3" aria-pressed="false"><span class="track"><span class="knob"></span></span>Power</button>
+        <ul class="bb-list" id="list-3">
+          <li>Arduino, sensor integration</li>
+          <li>Ultrasonic sensors, servo motors</li>
+          <li>LCD displays</li>
+          <li>Embedded systems fundamentals</li>
+        </ul>
+      </div>
+      <div class="bb-card">
+        <div class="bb-top"><span class="bb-code mono">C-04</span><span class="led" id="led-4"></span></div>
+        <h3>CAD / CAM &amp; 3D</h3>
+        <button class="bb-switch" data-on="false" data-target="led-4" aria-pressed="false"><span class="track"><span class="knob"></span></span>Power</button>
+        <ul class="bb-list" id="list-4">
+          <li>Autodesk Fusion 360</li>
+          <li>3D CAD modeling</li>
+          <li>3D printing design</li>
+          <li>Basic CAM workflows</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="titleblock">
+    <div class="tb-row">
+      <div class="tb-cell"><span class="k mono">Drawn by</span><span class="v">Yuvraj Kesarwani</span></div>
+      <div class="tb-cell"><span class="k mono">Sheet</span><span class="v">02 of 04 — Skills</span></div>
+      <div class="tb-cell"><span class="k mono">Location</span><span class="v">Ghaziabad, India</span></div>
+      <div class="tb-cell"><span class="k mono">Rev.</span><span class="v">2026</span></div>
+    </div>
+  </div>
+  <p class="fineprint">DRAWING SET — YUVRAJ KESARWANI PORTFOLIO</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.querySelectorAll('.bb-switch').forEach(sw => {
+    sw.addEventListener('click', () => {
+      const targetId = sw.getAttribute('data-target');
+      const listId = 'list-' + targetId.split('-')[1];
+      const list = document.getElementById(listId);
+      if (list) list.classList.toggle('lit');
+    });
+  });
+</script>
+</body>
+</html>

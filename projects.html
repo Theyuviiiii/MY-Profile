@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Kesarwani — Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .tab-bar{display:flex; gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px; flex-wrap:wrap;}
+  .tab-btn{
+    flex:1; min-width:160px; background:var(--bg); border:none; color:var(--muted);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+    padding:14px 16px; cursor:pointer; text-align:left;
+  }
+  .tab-btn .n{color:var(--accent); margin-right:8px;}
+  .tab-btn.active{background:var(--bg-2); color:var(--paper);}
+  .tab-btn:hover{color:var(--paper);}
+  .tab-panel{display:none; border:1px solid var(--line); border-top:none; padding:32px;}
+  .tab-panel.active{display:block;}
+  .ds-head{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:6px;}
+  .ds-head h3{font-size:21px; font-weight:600;}
+  .status{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.05em; color:var(--accent); border:1px solid var(--accent-dim); padding:2px 8px; text-transform:uppercase;}
+  .tags{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 18px;}
+  .tags span{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); border:1px solid var(--line); padding:3px 9px;}
+  .tab-panel p{color:var(--paper-dim); font-size:14.5px; margin:0 0 14px; max-width:70ch;}
+  .tab-panel ul{margin:0 0 16px; padding-left:18px; color:var(--paper-dim); font-size:14.5px;}
+  .tab-panel ul li{margin-bottom:4px;}
+  .tab-panel .link{font-family:'IBM Plex Mono', monospace; font-size:13px;}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">YK<span>/</span>DRAWING SET</div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Index</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="sheet-header">
+    <span class="tag mono">Sheet 03 — Datasheets</span>
+    <h1>Projects</h1>
+    <p class="dek">Three datasheets — one finished build, one in progress, two concepts.</p>
+  </div>
+
+  <section>
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-panel="p1" role="tab" aria-selected="true"><span class="n mono">01</span>Radar scanner</button>
+      <button class="tab-btn" data-panel="p2" role="tab" aria-selected="false"><span class="n mono">02</span>CampusLink</button>
+      <button class="tab-btn" data-panel="p3" role="tab" aria-selected="false"><span class="n mono">03</span>INTEFY / DIGUP</button>
+    </div>
+
+    <div class="tab-panel active" id="p1">
+      <div class="ds-head"><h3>Ultrasonic radar scanner</h3><span class="status">Complete</span></div>
+      <div class="tags"><span>Arduino</span><span>Ultrasonic sensor</span><span>Servo motor</span></div>
+      <p>An Arduino-based radar system that rotates an ultrasonic sensor across a defined range and plots detected objects by distance in real time.</p>
+      <ul>
+        <li>Combined servo control and live sensor readings for continuous rotational scanning</li>
+        <li>Handled real-time data processing between sensor input and rotation angle</li>
+        <li>First hands-on project in embedded programming and sensor integration</li>
+      </ul>
+      <a class="link" href="https://github.com/Theyuviiiii/Yuvraj-Kesharwani" target="_blank" rel="noopener">github.com/Theyuviiiii →</a>
+    </div>
+
+    <div class="tab-panel" id="p2">
+      <div class="ds-head"><h3>CampusLink — campus community platform</h3><span class="status">In progress</span></div>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span></div>
+      <p>A web platform built for college students to connect, built end to end — product design, frontend, and backend.</p>
+      <ul>
+        <li>Firebase handles authentication, database, and deployment</li>
+        <li>Focused on a simple, fast interface over feature sprawl</li>
+      </ul>
+      <a class="link" href="https://github.com/Theyuviiiii/Yuvraj-Kesharwani" target="_blank" rel="noopener">github.com/Theyuviiiii →</a>
+    </div>
+
+    <div class="tab-panel" id="p3">
+      <div class="ds-head"><h3>INTEFY &amp; DIGUP — product concepts</h3><span class="status">Concept stage</span></div>
+      <div class="tags"><span>Product design</span><span>Marketplace</span><span>Portfolio platform</span></div>
+      <p>Two early-stage ideas explored at the concept level rather than built out.</p>
+      <ul>
+        <li><strong style="color:var(--paper);">INTEFY</strong> — a hyperlocal marketplace concept connecting customers with interior professionals and vendors</li>
+        <li><strong style="color:var(--paper);">DIGUP</strong> — a portfolio platform for creators to showcase projects and build an online presence</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="titleblock">
+    <div class="tb-row">
+      <div class="tb-cell"><span class="k mono">Drawn by</span><span class="v">Yuvraj Kesarwani</span></div>
+      <div class="tb-cell"><span class="k mono">Sheet</span><span class="v">03 of 04 — Projects</span></div>
+      <div class="tb-cell"><span class="k mono">Location</span><span class="v">Ghaziabad, India</span></div>
+      <div class="tb-cell"><span class="k mono">Rev.</span><span class="v">2026</span></div>
+    </div>
+  </div>
+  <p class="fineprint">DRAWING SET — YUVRAJ KESARWANI PORTFOLIO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

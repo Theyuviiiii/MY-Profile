@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Kesarwani — About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:56px;}
+  .about-grid p{color:var(--paper-dim); font-size:15.5px; margin:0 0 16px; max-width:60ch;}
+  .timeline{border-left:1px solid var(--line); margin-left:6px; padding-left:24px; display:flex; flex-direction:column; gap:28px;}
+  .timeline .t-item{position:relative;}
+  .timeline .t-item::before{content:''; position:absolute; left:-29px; top:4px; width:9px; height:9px; border-radius:50%; background:var(--bg); border:2px solid var(--accent);}
+  .timeline .yr{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent); letter-spacing:.05em;}
+  .timeline h4{font-size:15px; font-weight:600; margin:4px 0 4px; color:var(--paper);}
+  .timeline p{margin:0; font-size:13.5px; color:var(--paper-dim);}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">YK<span>/</span>DRAWING SET</div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Index</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="sheet-header">
+    <span class="tag mono">Sheet 01 — Elevation view</span>
+    <h1>About</h1>
+    <p class="dek">A CSE student who splits time between the browser and the breadboard.</p>
+  </div>
+
+  <section>
+    <div class="about-grid" style="margin-top:40px;">
+      <div>
+        <p>I'm a Computer Science Engineering student at KIET Group of Institutions, currently in my 2nd year, based in Ghaziabad, Uttar Pradesh. My main focus is web development — building interfaces and applications with HTML, CSS, JavaScript, and Firebase — backed by programming fundamentals in C, C++, Java, and Python.</p>
+        <p>What sets my interests apart is that I don't stop at software. I built an Arduino-based radar scanner from scratch, and I model physical objects in Autodesk Fusion 360 for 3D printing. I like understanding a system end to end — from the sensor reading, to the server, to the screen.</p>
+        <p>I've also sketched two early product concepts, INTEFY and DIGUP, exploring what a hyperlocal marketplace and a creator portfolio platform could look like. They're ideas-in-progress, not shipped products yet — but they're where a lot of my thinking about product design happens.</p>
+      </div>
+      <div class="spec-box" data-tag="PROFILE">
+        <div class="spec-row"><span class="k mono">LOCATION</span><span class="v">Ghaziabad, UP, India</span></div>
+        <div class="spec-row"><span class="k mono">PROGRAM</span><span class="v">B.Tech, CSE</span></div>
+        <div class="spec-row"><span class="k mono">COHORT</span><span class="v">2025 – 2029</span></div>
+        <div class="spec-row"><span class="k mono">STATUS</span><span class="v">2nd year</span></div>
+        <div class="spec-row"><span class="k mono">LANGUAGES</span><span class="v">EN · HI · DE (A1)</span></div>
+        <div class="spec-row"><span class="k mono">FOCUS</span><span class="v">Web + Systems</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sheet-label"><span class="num mono">01a</span><h2>Build log</h2><span class="rule"></span></div>
+  <section>
+    <div class="timeline">
+      <div class="t-item">
+        <span class="yr mono">2025</span>
+        <h4>Started B.Tech, CSE at KIET Group of Institutions</h4>
+        <p>Began coursework in programming fundamentals, data structures, and OOP.</p>
+      </div>
+      <div class="t-item">
+        <span class="yr mono">Year 1 — early build</span>
+        <h4>Ultrasonic radar scanner</h4>
+        <p>First hands-on hardware project — Arduino, an ultrasonic sensor, and a servo motor.</p>
+      </div>
+      <div class="t-item">
+        <span class="yr mono">Ongoing</span>
+        <h4>CampusLink and early product concepts</h4>
+        <p>Building a web platform end to end, and sketching INTEFY and DIGUP alongside it.</p>
+      </div>
+      <div class="t-item">
+        <span class="yr mono">2026 —</span>
+        <h4>2nd year, present</h4>
+        <p>Deepening DSA fundamentals and shipping more finished, linkable work.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="titleblock">
+    <div class="tb-row">
+      <div class="tb-cell"><span class="k mono">Drawn by</span><span class="v">Yuvraj Kesarwani</span></div>
+      <div class="tb-cell"><span class="k mono">Sheet</span><span class="v">01 of 04 — About</span></div>
+      <div class="tb-cell"><span class="k mono">Location</span><span class="v">Ghaziabad, India</span></div>
+      <div class="tb-cell"><span class="k mono">Rev.</span><span class="v">2026</span></div>
+    </div>
+  </div>
+  <p class="fineprint">DRAWING SET — YUVRAJ KESARWANI PORTFOLIO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
